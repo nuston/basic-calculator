@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body bgcolor="">
+    <div class="main"> 
+        <div id="sub-main1">
+            <div id="display"></div>
+        </div>
+        <div id="sub-main2">
+            
+            <div class="other1"><button onClick="getValueC()">AC</button></div>
+            <div class="other1"><button onClick="getValueDEL()">DEL</button></div>
+            <div class="other1"><button onClick="getValueC()">C</button></div>
+            <div class="other"><button onClick="divide()">/</button></div>
+
+            <div class="number"><button onClick="getValue(7)">7</button></div>
+            <div class="number"><button onClick="getValue(8)">8</button></div>
+            <div class="number"><button onClick="getValue(9)">9</button></div>
+            <div class="other"><button onClick="multiply()">x</button></div>
+         
+            <div class="number"><button onClick="getValue(4)">4</button></div>
+            <div class="number"><button onClick="getValue(5)">5</button></div>
+            <div class="number"><button onClick="getValue(6)">6</button></div>
+            <div class="other"><button onClick="minus()">-</button></div>
+
+            <div class="number"><button onClick="getValue(1)">1</button></div>
+            <div class="number"><button onClick="getValue(2)">2</button></div>
+            <div class="number"><button onClick="getValue(3)">3</button></div>
+            <div class="other"><button onClick="plus()">+</button></div>
+
+            
+            <div class="number"><button onClick="getValue(0)">0</button></div>
+            <div class="number"><button onClick="getValueDecimal()">.</button></div>
+            <div class="other"><button onClick="answer()">=</button></div>
+            
+            
+        </div>
+        <p>Designed & Developed by @<b>NUSTONPAY</b>_2022</p>
+    </div>
+    
+    <script>
+
+var inputData;
+
+function getValue(val) {
+    display(val)
+}
+   
+function getValue(val) {
+     display(val)
+}
+
+function getValue(val) {
+    display(val)
+}
+
+
+function getValue(val) {
+    display(val)
+}
+
+function getValue(val) {
+    display(val)
+}
+
+function getValue(val) {
+    display(val)
+}
+function getValue(val) {
+    display(val)
+}
+function getValue(val) {
+    display(val)
+}
+function getValue(val) {
+    display(val)
+}
+function getValue(val) {
+    
+    display(val)
+}
+function getValueDecimal() {
+    var value = ".";
+    display(value)
+}
+function plus() {
+    var value = "+"
+    display(value)
+}
+function minus() {
+    var value = "-"
+    display(value)
+}
+function multiply() {
+    var value = "*"
+    display(value)
+}
+function divide() {
+    var value = "/"
+    display(value)
+}
+
+function getValueDEL() {
+    var input = eval(document.getElementById("display").innerText)
+    var inputNumber = input.toString()
+    if (inputNumber.length===1)
+        {
+           document.getElementById("display").innerText = ""
+           
+        }
+        else {
+            inputNumber = inputNumber.slice(0,-1)
+
+   document.getElementById("display").innerText = (parseInt(inputNumber))
+
+        }
+    
+    
+}
+function getValueC() {
+    document.getElementById("display").innerText = ""
+}
+function answer() {
+    var value = "="
+    display(value)
+}
+function display(v) {
+    if (v == "=") {
+        inputData = eval(document.getElementById("display").innerText)
+        document.getElementById("display").innerText = inputData
+    } else {
+        document.getElementById("display").innerText += v
+    }
+}
+
+    </script>
+</body>
+</html>
