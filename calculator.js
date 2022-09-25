@@ -69,11 +69,11 @@ function answer() {
     var value = "="
     display(value)
 }
-function display(v) {
-    if (v == "=") {
+function display(solutions) {
+    if (solutions== "=") {
         inputData = eval(document.getElementById("display").innerText)
         document.getElementById("display").innerText = inputData
     } else {
-        document.getElementById("display").innerText += v
+        document.getElementById("display").innerText += solutions
     }
 }
